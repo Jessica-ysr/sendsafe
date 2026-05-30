@@ -6,12 +6,20 @@ const styles = `
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: #faf9f7;
-    background-image: radial-gradient(#e8e8e8 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-color: #faf9f7;
+    background-image: 
+      radial-gradient(#e8e8e8 1px, transparent 1px),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 27px,
+        #ece9e0 27px,
+        #ece9e0 28px
+      );
+    background-size: 24px 24px, 100% 28px;
     min-height: 100vh;
     font-family: 'DM Sans', sans-serif;
-  }
+    }
 
   .app {
     min-height: 100vh;

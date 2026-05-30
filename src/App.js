@@ -119,6 +119,44 @@ const styles = `
     gap: 24px;
     flex: 1;
   }
+  @media (max-width: 768px) {
+    .app {
+      padding: 24px 16px;
+    }
+
+    .header {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .header-right {
+      text-align: left;
+    }
+
+    .logo {
+      font-size: 48px;
+    }
+
+    .tagline {
+      font-size: 18px;
+    }
+
+    .tagline-sub {
+      font-size: 14px;
+    }
+
+    .columns {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+      font-size: 28px;
+    }
+
+    .step-text {
+      font-size: 13px;
+    }
+  }
 
   .panel {
     background: #fff;
@@ -443,5 +481,4 @@ export default function App() {
       </div>
     </>
   );
-}t e s t  
- 
+}

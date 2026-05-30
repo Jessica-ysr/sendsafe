@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# SendSafe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Send with confidence, not regret.**
 
-## Available Scripts
+SendSafe is an AI-powered conflict detection tool that analyzes your messages before you send them. It detects aggressive tone, flags problematic phrases, and rewrites your message in a calmer version — so you never send something you'll regret.
 
-In the project directory, you can run:
+🔗 **Live Demo**: [sendsafe-neon.vercel.app](https://sendsafe-neon.vercel.app)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What it does
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Analyzes any message, email, or text for conflict potential
+- Returns a conflict score from 0 to 100
+- Highlights specific phrases causing the conflict
+- Generates a calmer rewrite while preserving your intent
+- Tracks live stats — messages analyzed and conflicts prevented
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+**Frontend**
+- React
+- CSS-in-JS with custom design system
+- Deployed on Vercel
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Backend**
+- Python + FastAPI
+- Groq API (LLaMA 3.3 70B) for AI analysis
+- Deployed on Render
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How it works
 
-### `npm run eject`
+1. User pastes a message into the input panel
+2. React sends it to the FastAPI backend
+3. Backend sends it to Groq's LLaMA model with a structured prompt
+4. AI returns conflict score, flagged phrases, and a rewrite
+5. Results display instantly in the analysis panel
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Backend**
+```bash
+cd sendsafe-backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Frontend**
+```bash
+cd sendsafe
+npm install
+npm start
+```
 
-## Learn More
+Set your Groq API key as an environment variable: GROQ_API_KEY=your_key_here
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Built by
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Jessica — 3rd year CSE student at Sathyabama University  
+Full Stack + AI/ML path  
+[LinkedIn](#) | [GitHub](https://github.com/Jessica-ysr)

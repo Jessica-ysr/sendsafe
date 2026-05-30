@@ -308,7 +308,7 @@ export default function App() {
   const [prevented, setPrevented] = useState(0);
 
   React.useEffect(() => {
-    fetch('http://127.0.0.1:8000/count')
+    fetch('https://sendsafe-backend.onrender.com/count')
       .then(r => r.json())
       .then(data => { setCount(data.count); setPrevented(data.prevented); });
   }, [result]);
@@ -317,7 +317,7 @@ export default function App() {
     if (!message.trim()) return;
     setLoading(true);
     try {
-      const response = await fetch('http://127.0.0.1:8000/analyze', {
+      const response = await fetch('https://sendsafe-backend.onrender.com/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message })
